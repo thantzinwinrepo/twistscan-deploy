@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+
+  dashboard:
+    build: .
+    container_name: twistscan-dashboard
+    ports:
+      - "5000:5000"
+    environment:
+      - URLSCAN_API=${URLSCAN_API}
+    volumes:
+      - ./:/app
+    restart: unless-stopped
+    command: python app.py
+
+  scanner:
+    build: .
+    container_name: twistscan-scanner
+    environment:
+      - URLSCAN_API=${URLSCAN_API}
+    volumes:
+      - ./:/app
+    profiles:
+      - scan
+    command: python twistscan.py --domain ${TARGET_DOMAIN:-example.com}

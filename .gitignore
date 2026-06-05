@@ -1,2 +1,8 @@
-### dotenv ###
 .env
+venv/
+__pycache__/
+*.pyc
+output_urlscan.csv
+output_dnstwist.csv
+screenshots/
+*.png

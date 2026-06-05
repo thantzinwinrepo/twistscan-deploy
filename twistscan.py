@@ -99,7 +99,7 @@ if os.path.exists(OUTPUT_FILE):
                 elapsed_time = 0
                 time.sleep(10)  # Initial wait
                 while elapsed_time < MAX_WAIT_TIME:
-                    result_response = requests.get(result_url)
+                    result_response = requests.get(result_url, headers={'API-Key': API_KEY})
                     if result_response.status_code == 200:
                         result_data = result_response.json()
                         screenshot_url = result_data['task']['screenshotURL']

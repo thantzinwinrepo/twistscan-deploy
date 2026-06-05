@@ -1,0 +1,24 @@
+# Never bake secrets into the image
+.env
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+*.egg-info/
+
+# Scan outputs (mounted as volumes)
+output_urlscan.csv
+output_dnstwist.csv
+screenshots/
+
+# Git
+.git/
+.gitignore
+
+# Docs
+*.md
+*.docx
