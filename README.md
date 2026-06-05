@@ -1,3 +1,7 @@
+> **Fork Notice:** This is a fork of [TwistScan](https://github.com/marcopedrinazzi/twistscan) by [marcopedrinazzi](https://github.com/marcopedrinazzi), with additional Docker support and a custom Flask dashboard with intelligence visualizations.
+
+---
+
 # TwistScan
 
 TwistScan is a Python tool that merges the domain‑permutation power of [**dnstwist**](https://github.com/elceef/dnstwist) with the dynamic scanning capabilities of [**urlscan.io**](https://urlscan.io/), to streamline the detection of phishing, typosquatting, and brand‑impersonation attempts.
